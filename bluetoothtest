@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Escanear dispositivos Bluetooth disponibles
+devices=$(bluetoothctl devices | awk '{print $2 " " substr($0, index($0,$3))}')
+
+# Mostrar el menú con rofi y guardar la selección
+selected_device=$(echo "$devices" | rofi -dmenu -p "Seleccionar dispositivo Bluetooth" | awk '{print $1}')
+
+# Si el usuario selecciona un dispositivo
+if [ -n "$selected_device" ]; then
+    # Intentar conectar al dispositivo seleccionado
+    bluetoothctl connect "$selected_device"
+fi
