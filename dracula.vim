@@ -37,4 +37,10 @@ hi Visual       guibg=#44475a
 hi StatusLine   guifg=#f8f8f2 guibg=#44475a
 hi StatusLineNC guifg=#bd93f9 guibg=#282a36
 hi Pmenu        guibg=#44475a guifg=#f8f8f2
-hi PmenuSel     guib
+hi PmenuSel     guibg=#6272a4 guifg=#f8f8f2
+
+" Otros colores
+hi VertSplit    guifg=#44475a
+hi TabLine      guibg=#44475a guifg=#6272a4
+hi TabLineSel   guibg=#6272a4 guifg=#f8f8f2
+hi TabLineFill  guibg=#282a36 guifg=#6272a4
